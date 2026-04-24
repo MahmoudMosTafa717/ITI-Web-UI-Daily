@@ -1,0 +1,26 @@
+<div class="carousel-container">
+  @if (slides.length > 0) {
+    <div class="carousel-slide">
+      @for (slide of slides; track slide.src; let i = $index) {
+        <img
+          [src]="slide.src"
+          [class.visible]="currentIndex === i"
+          [alt]="slide.alt"
+          class="carousel-image"
+          alt="carousel image"
+          title="carousel image"
+        />
+      }
+
+      <button type="button" class="nav-btn prev-btn" (click)="prev()">&#10094;</button>
+
+      <button type="button" class="nav-btn next-btn" (click)="next()">&#10095;</button>
+    </div>
+
+    <div class="dots-container">
+      @for (slide of slides; track slide.src; let i = $index) {
+        <span class="dot" [class.active]="currentIndex === i" (click)="goTo(i)"></span>
+      }
+    </div>
+  }
+</div>

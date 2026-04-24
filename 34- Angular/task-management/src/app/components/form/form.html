@@ -1,0 +1,59 @@
+<aside class="task-form">
+  <h2>Add New Task</h2>
+  <form>
+    <div class="form-group">
+      <label for="title">Title</label>
+      <input
+        type="text"
+        id="title"
+        name="title"
+        [(ngModel)]="title"
+        placeholder="Task title"
+        (ngModelChange)="titleInvalid = false"
+      />
+      @if (titleInvalid) {
+        <span class="form-error">Title is required.</span>
+      }
+    </div>
+
+    <div class="form-group">
+      <label for="description">Description</label>
+      <textarea
+        id="description"
+        name="description"
+        [(ngModel)]="description"
+        placeholder="Task description"
+      ></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="priority">Priority</label>
+      <select name="priority" id="priority" [(ngModel)]="priority">
+        <option value="low">Low</option>
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="dueDate">Due Date</label>
+      <input type="date" id="dueDate" name="dueDate" [(ngModel)]="dueDate" />
+    </div>
+
+    <div class="form-group">
+      <label for="category">Category</label>
+      <select name="category" id="category" [(ngModel)]="category">
+        <option value="work">work</option>
+        <option value="personal">personal</option>
+        <option value="study">study</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="tags">Tags</label>
+      <input type="text" id="tags" name="tags" [(ngModel)]="tags" placeholder="e.g. planning, design" />
+    </div>
+
+    <button type="button" class="btn-submit" (click)="addTask()">Add Task</button>
+  </form>
+</aside>

@@ -1,0 +1,39 @@
+<app-carousel></app-carousel>
+<div class="home-page">
+  <section class="hero">
+    <div class="hero__content">
+      <h1 class="hero__title">
+        @if (user) {
+          Welcome back, {{ user.name }}!
+        } @else {
+          Welcome to Task Manager
+        }
+      </h1>
+      <p class="hero__subtitle">
+        Organize your work, track progress, and boost your productivity with our powerful task management system.
+      </p>
+      <div class="hero__actions">
+        <a routerLink="/add-task" class="btn-hero btn-hero--primary">Add New Task</a>
+        <a routerLink="/tasks" class="btn-hero btn-hero--secondary">View Tasks</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="feature-card">
+      <div class="feature-card__icon">📋</div>
+      <h3>Organize Tasks</h3>
+      <p>Create, update, and manage all your tasks in one place with categories and priorities.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-card__icon">✅</div>
+      <h3>Track Progress</h3>
+      <p>Mark tasks as done, filter by status, and see your accomplishments at a glance.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-card__icon">🏷️</div>
+      <h3>Tag & Categorize</h3>
+      <p>Use tags and categories to keep your tasks organized and easy to find.</p>
+    </div>
+  </section>
+</div>

@@ -1,0 +1,42 @@
+.notification-container {
+  position: fixed;
+  top: 80px;
+  right:  20px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.notification-item {
+  min-width: 220px;
+  max-width: 320px;
+  padding: 10px 14px;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  font-size: 14px;
+}
+
+.notification-item--info {
+  background: #e7f1ff;
+  border-color: #b6d4fe;
+  color: #084298;
+}
+
+.notification-item--warning {
+  background: #fff3cd;
+  border-color: #ffecb5;
+  color: #664d03;
+}
+
+.notification-item--error {
+  background: #f8d7da;
+  border-color: #f5c2c7;
+  color: #842029;
+}
+
+.notification-item--success {
+  background: #d1e7dd;
+  border-color: #badbcc;
+  color: #0f5132;
+}

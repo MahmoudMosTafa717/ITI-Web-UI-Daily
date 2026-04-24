@@ -1,0 +1,127 @@
+<article
+  class="task-card"
+  [class.task-card--done]="task.isDone"
+  [class.task-card--priority-low]="task.priority === 'low'"
+  [class.task-card--priority-medium]="task.priority === 'medium'"
+  [class.task-card--priority-high]="task.priority === 'high'"
+>
+  <div class="task-card__top">
+    <p class="task-card__category">{{ task.category }}</p>
+    <p class="task-card__priority">{{ priorityLabel(task.priority) }}</p>
+  </div>
+
+  <p class="task-card__status">
+    @if (task.isDone) {
+      <span>Status: Done</span>
+    } @else {
+      <span>Status: Not done</span>
+    }
+  </p>
+
+  @if (!editing) {
+    <h3 class="task-card__title">{{ task.title }}</h3>
+    <p class="task-card__description">
+      {{ task.description || '—' }}
+    </p>
+
+    <div class="task-card__meta">
+      <div class="task-card__meta-item">
+        <span>Due Date</span>
+        <p>{{ task.dueDate || '—' }}</p>
+      </div>
+
+      <div class="task-card__meta-item">
+        <span>Tags</span>
+        @if (tagParts(task.tags).length === 0) {
+          <p>—</p>
+        } @else {
+          <div class="task-card__tags">
+            @for (tag of tagParts(task.tags); track $index) {
+              <span class="task-card__tag-pill">{{ tag }}</span>
+            }
+          </div>
+        }
+      </div>
+    </div>
+
+    <div class="task-card__actions">
+      @if (task.isDone) {
+        <button type="button" class="task-card__btn task-card__btn--secondary" (click)="onToggleDone()">
+          Undo
+        </button>
+      } @else {
+        <button type="button" class="task-card__btn task-card__btn--primary" (click)="onToggleDone()">
+          Mark as done
+        </button>
+      }
+      <button type="button" class="task-card__btn task-card__btn--secondary" (click)="startEdit()">Update</button>
+      <button type="button" class="task-card__btn task-card__btn--danger" (click)="onDelete()">Delete</button>
+    </div>
+  } @else {
+    <div class="task-card__edit">
+      <label class="task-card__edit-label" for="edit-title-{{ task.id }}">Title</label>
+      <input
+        class="task-card__edit-input"
+        id="edit-title-{{ task.id }}"
+        name="editTitle"
+        [(ngModel)]="editTitle"
+      />
+
+      <label class="task-card__edit-label" for="edit-desc-{{ task.id }}">Description</label>
+      <textarea
+        class="task-card__edit-textarea"
+        id="edit-desc-{{ task.id }}"
+        name="editDescription"
+        [(ngModel)]="editDescription"
+      ></textarea>
+
+      <label class="task-card__edit-label" for="edit-priority-{{ task.id }}">Priority</label>
+      <select
+        class="task-card__edit-select"
+        id="edit-priority-{{ task.id }}"
+        name="editPriority"
+        [(ngModel)]="editPriority"
+      >
+        <option value="low">Low</option>
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+      </select>
+
+      <label class="task-card__edit-label" for="edit-due-{{ task.id }}">Due date</label>
+      <input
+        class="task-card__edit-input"
+        type="date"
+        id="edit-due-{{ task.id }}"
+        name="editDueDate"
+        [(ngModel)]="editDueDate"
+      />
+
+      <label class="task-card__edit-label" for="edit-cat-{{ task.id }}">Category</label>
+      <select
+        class="task-card__edit-select"
+        id="edit-cat-{{ task.id }}"
+        name="editCategory"
+        [(ngModel)]="editCategory"
+      >
+        <option value="work">work</option>
+        <option value="personal">personal</option>
+        <option value="study">study</option>
+      </select>
+
+      <label class="task-card__edit-label" for="edit-tags-{{ task.id }}">Tags</label>
+      <input
+        class="task-card__edit-input"
+        id="edit-tags-{{ task.id }}"
+        name="editTags"
+        [(ngModel)]="editTags"
+      />
+
+      <div class="task-card__actions">
+        <button type="button" class="task-card__btn task-card__btn--primary" (click)="saveEdit()">Save</button>
+        <button type="button" class="task-card__btn task-card__btn--secondary" (click)="cancelEdit()">
+          Cancel
+        </button>
+      </div>
+    </div>
+  }
+</article>

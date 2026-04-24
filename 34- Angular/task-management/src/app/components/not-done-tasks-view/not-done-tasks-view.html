@@ -1,0 +1,12 @@
+@if (tasks.length === 0) {
+  <p class="tasks-empty">No open tasks. Nice work — or add a new one.</p>
+}
+@for (task of tasks; track task.id) {
+  <app-task-card
+    [task]="task"
+    (deleteTask)="deleteTask.emit($event)"
+    (toggleDone)="toggleDone.emit($event)"
+    (updateTask)="updateTask.emit($event)"
+    (validationError)="validationError.emit($event)"
+  ></app-task-card>
+}

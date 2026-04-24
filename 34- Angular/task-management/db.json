@@ -1,0 +1,47 @@
+{
+  "users": [
+    {
+      "name": "Mahmoud Mostafa",
+      "email": "mhmodmost121222@gmail.com",
+      "password": "123456",
+      "id": "6hth8KHe404"
+    },
+    {
+      "name": "Mahmoud Mostafa",
+      "email": "mhmodmost121222@gmail.com",
+      "password": "123456",
+      "id": "awQxpHVuSS8"
+    },
+    {
+      "name": "Mahmoud Mostafa",
+      "email": "asd@gmail.com",
+      "password": "asdfgh",
+      "id": "3bMV1L-b3xc"
+    }
+  ],
+  "tasks": [
+    {
+      "title": "Task 1",
+      "description": "task 2",
+      "priority": "high",
+      "dueDate": "2026-04-25",
+      "category": "personal",
+      "tags": "#a #b #c #d",
+      "isDone": false,
+      "userId": "6hth8KHe404",
+      "id": "5tqoiO3_Ei4"
+    },
+    {
+      "title": "task2",
+      "description": "as",
+      "priority": "low",
+      "dueDate": "2026-05-02",
+      "category": "study",
+      "tags": "#asd",
+      "isDone": true,
+      "userId": "6hth8KHe404",
+      "id": "oZDjB4A5xoQ"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

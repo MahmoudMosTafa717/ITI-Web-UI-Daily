@@ -1,0 +1,17 @@
+:host {
+  display: contents;
+}
+
+.add-task-page {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 40px 20px 60px;
+}
+
+.page-title {
+  font-size: 28px;
+  font-weight: 800;
+  color: #150d0d;
+  margin: 0 0 24px 0;
+  text-align: center;
+}

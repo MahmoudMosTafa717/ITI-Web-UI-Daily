@@ -1,0 +1,13 @@
+:host {
+  display: contents;
+}
+
+.tasks-empty {
+  width: 100%;
+  margin: 0;
+  padding: 12px;
+  border: 1px dashed #150d0d;
+  border-radius: 8px;
+  color: #333;
+  font-size: 14px;
+}

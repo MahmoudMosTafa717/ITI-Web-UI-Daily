@@ -1,0 +1,170 @@
+.task-card {
+  background-color: #e5e5e5;
+  border: 2px solid #150d0d;
+  box-shadow: 6px 6px 0px #150d0d;
+  border-radius: 8px;
+  padding: 20px;
+  width: 320px;
+  color: #150d0d;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.task-card__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-card__category {
+  background-color: #9ac6c6;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+  border: 1px solid #150d0d;
+  margin: 0px;
+}
+
+.task-card__priority {
+  font-size: 12px;
+  font-weight: bold;
+  margin: 0px;
+}
+
+.task-card__title {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0px;
+}
+
+.task-card__description {
+  font-size: 14px;
+  line-height: 1.4;
+  margin: 0px;
+  color: #333;
+}
+
+.task-card__meta {
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 10px;
+  border-top: 1px dashed #150d0d;
+}
+
+.task-card__meta-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.task-card__meta-item span {
+  font-size: 11px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.task-card__meta-item p {
+  font-size: 14px;
+  margin: 4px 0px 0px 0px;
+}
+
+.task-card__status {
+  font-size: 12px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.task-card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.task-card__btn {
+  padding: 8px 12px;
+  border: 2px solid #150d0d;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.task-card__btn--primary {
+  background-color: #150d0d;
+  color: #dad5d0;
+}
+
+.task-card__btn--secondary {
+  background-color: #dad5d0;
+  color: #150d0d;
+}
+
+.task-card__btn--danger {
+  background-color: #f5e6e6;
+  color: #8b0000;
+  border-color: #8b0000;
+}
+
+.task-card__edit {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.task-card__edit-label {
+  font-size: 11px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.task-card__edit-input,
+.task-card__edit-textarea,
+.task-card__edit-select {
+  padding: 8px;
+  border: 1px solid #150d0d;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.task-card__edit-textarea {
+  min-height: 72px;
+  resize: vertical;
+}
+
+.task-card--done .task-card__title,
+.task-card--done .task-card__description {
+  text-decoration: line-through;
+  opacity: 0.85;
+}
+
+.task-card--priority-low {
+  border-color: #648383;
+}
+
+.task-card--priority-medium {
+  border-color: #648383;
+}
+
+.task-card--priority-high {
+  border-color: #648383;
+}
+
+.task-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 4px 0 0 0;
+}
+
+.task-card__tag-pill {
+  font-size: 12px;
+  padding: 2px 8px;
+  background-color: #dad5d0;
+  border: 1px solid #150d0d;
+  border-radius: 4px;
+}

@@ -1,0 +1,63 @@
+<div class="about-page">
+  <section class="about-hero">
+    <h1>About Task Manager</h1>
+    <p>A modern Angular application built to demonstrate best practices</p>
+  </section>
+
+  <section class="about-content">
+    <div class="about-card">
+      <h2>🏗️ Architecture</h2>
+      <p>
+        Built with Angular's standalone component architecture, this app showcases
+        modular design with lazy-loaded feature modules, route guards, and a clean
+        separation of concerns.
+      </p>
+    </div>
+
+    <div class="about-card">
+      <h2>🔄 Lifecycle Hooks</h2>
+      <p>
+        Demonstrates <code>ngOnInit</code> for timer initialization,
+        <code>ngOnChanges</code> for receiving new tasks via &#64;Input,
+        and <code>ngOnDestroy</code> for cleanup with component-closed notifications.
+      </p>
+    </div>
+
+    <div class="about-card">
+      <h2>📝 Forms</h2>
+      <p>
+        Features both <strong>Template-driven Forms</strong> (Login) and
+        <strong>Reactive Forms</strong> (Signup) with full validation,
+        error messages, and form state management.
+      </p>
+    </div>
+
+    <div class="about-card">
+      <h2>🔐 Authentication</h2>
+      <p>
+        Local authentication using localStorage with Auth Guards for protected routes
+        and Guest Guards for public-only routes like Login and Signup.
+      </p>
+    </div>
+
+    <div class="about-card">
+      <h2>⚡ Lazy Loading</h2>
+      <p>
+        The Auth and Tasks modules are lazy-loaded using <code>loadChildren</code>
+        for optimal performance, loading code only when needed.
+      </p>
+    </div>
+
+    <div class="about-card">
+      <h2>🎯 Key Concepts</h2>
+      <ul>
+        <li>&#64;Input / &#64;Output decorators</li>
+        <li>&#64;switch control flow</li>
+        <li>Route guards (CanActivate)</li>
+        <li>Services &amp; dependency injection</li>
+        <li>ChangeDetectorRef</li>
+        <li>:host {{ '{' }} display: contents {{ '}' }}</li>
+      </ul>
+    </div>
+  </section>
+</div>

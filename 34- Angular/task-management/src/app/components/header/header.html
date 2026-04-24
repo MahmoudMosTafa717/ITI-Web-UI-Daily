@@ -1,0 +1,24 @@
+<header class="site-header">
+  <a routerLink="/" class="site-header__logo">
+    <h1>Task Manager</h1>
+  </a>
+
+  <div class="site-header__timer">
+    <span class="timer-icon">⏱️</span>
+    <span class="timer-value">{{ clockValue }}</span>
+  </div>
+
+  <nav class="site-header__nav">
+    @if (isLoggedIn) {
+      <a routerLink="/" routerLinkActive="nav-active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+      <a routerLink="/add-task" routerLinkActive="nav-active">Add Task</a>
+      <a routerLink="/tasks" routerLinkActive="nav-active">Tasks List</a>
+      <a routerLink="/about" routerLinkActive="nav-active">About</a>
+      <span class="nav-user">{{ userName }}</span>
+      <button type="button" class="btn-logout" (click)="logout()">Logout</button>
+    } @else {
+      <a routerLink="/auth/login" routerLinkActive="nav-active">Login</a>
+      <a routerLink="/auth/signup" routerLinkActive="nav-active" class="btn-signup">Sign Up</a>
+    }
+  </nav>
+</header>

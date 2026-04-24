@@ -1,0 +1,9 @@
+@if (notifications.length > 0) {
+  <section class="notification-container">
+    @for (notification of notifications; track notification.id) {
+      <div [class]="alertClass(notification.type)">
+        {{ notification.message }}
+      </div>
+    }
+  </section>
+}

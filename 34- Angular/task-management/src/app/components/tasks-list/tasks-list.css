@@ -1,0 +1,52 @@
+.tasks-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  flex: 1;
+}
+
+.tasks-list-section {
+  width: 100%;
+}
+
+.tasks-list-heading {
+  margin: 0 0 12px 0;
+  font-size: 22px;
+  color: #150d0d;
+}
+
+.tasks-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.tasks-tab {
+  padding: 8px 14px;
+  border: 2px solid #150d0d;
+  border-radius: 6px;
+  background: #dad5d0;
+  font-weight: bold;
+  cursor: pointer;
+  color: #150d0d;
+}
+
+.tasks-tab:hover {
+  background: #c9c4bf;
+}
+
+.tasks-tab--active {
+  background: #9ac6c6;
+  box-shadow: 3px 3px 0 #150d0d;
+}
+
+.tasks-empty {
+  width: 100%;
+  margin: 0;
+  padding: 12px;
+  border: 1px dashed #150d0d;
+  border-radius: 8px;
+  color: #333;
+  font-size: 14px;
+}

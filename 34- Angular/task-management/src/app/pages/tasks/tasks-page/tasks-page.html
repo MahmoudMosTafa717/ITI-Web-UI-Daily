@@ -1,0 +1,7 @@
+<div class="tasks-page">
+  <h1 class="page-title">Your Tasks</h1>
+  <app-tasks-list
+    (infoNotification)="onInfoNotification($event)"
+    (validationError)="onValidationError($event)"
+  ></app-tasks-list>
+</div>

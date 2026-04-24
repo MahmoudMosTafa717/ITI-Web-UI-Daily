@@ -1,0 +1,122 @@
+:host {
+  display: contents;
+}
+
+.auth-page {
+  min-height: calc(100vh - 200px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 440px;
+  background-color: #afdcdc;
+  border: 2px solid #150d0d;
+  box-shadow: 8px 8px 0px #150d0d;
+  border-radius: 12px;
+  padding: 40px 36px;
+}
+
+.auth-card__header {
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.auth-card__header h1 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #150d0d;
+  margin: 0 0 8px 0;
+}
+
+.auth-card__header p {
+  font-size: 14px;
+  color: #555;
+  margin: 0;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: #150d0d;
+}
+
+.form-group input {
+  padding: 12px 14px;
+  border: 2px solid #d5d0cb;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 14px;
+  transition: border-color 0.2s ease;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #9ac6c6;
+  box-shadow: 0 0 0 3px rgba(154, 198, 198, 0.25);
+}
+
+.form-error {
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: 4px;
+  color: #8b0000;
+}
+
+.btn-auth {
+  width: 100%;
+  padding: 14px;
+  background-color: #150d0d;
+  color: #dad5d0;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 8px;
+}
+
+.btn-auth:hover {
+  background-color: #333;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn-auth:active {
+  transform: translateY(0);
+}
+
+.auth-footer {
+  text-align: center;
+  margin-top: 24px;
+  font-size: 14px;
+  color: #555;
+}
+
+.auth-footer a {
+  color: #150d0d;
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 2px solid #9ac6c6;
+  transition: border-color 0.2s;
+}
+
+.auth-footer a:hover {
+  border-color: #150d0d;
+}

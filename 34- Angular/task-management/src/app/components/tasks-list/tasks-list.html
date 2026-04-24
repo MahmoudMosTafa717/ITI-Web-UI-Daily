@@ -1,0 +1,65 @@
+<section class="tasks-list-section">
+  <h2 class="tasks-list-heading">Your Tasks</h2>
+
+  <div class="tasks-tabs">
+    <button
+      type="button"
+      class="tasks-tab"
+      [class.tasks-tab--active]="selectedTab === 'all'"
+      (click)="selectedTab = 'all'"
+    >
+      All
+    </button>
+    <button
+      type="button"
+      class="tasks-tab"
+      [class.tasks-tab--active]="selectedTab === 'done'"
+      (click)="selectedTab = 'done'"
+    >
+      Done
+    </button>
+    <button
+      type="button"
+      class="tasks-tab"
+      [class.tasks-tab--active]="selectedTab === 'not-done'"
+      (click)="selectedTab = 'not-done'"
+    >
+      Not done
+    </button>
+  </div>
+
+  <div class="tasks-container">
+    @switch (selectedTab) {
+      @case ('all') {
+        <app-all-tasks-view
+          [tasks]="tasksAll()"
+          (deleteTask)="onDeleteTask($event)"
+          (toggleDone)="onToggleDone($event)"
+          (updateTask)="onUpdateTask($event)"
+          (validationError)="validationError.emit($event)"
+          (componentClosed)="infoNotification.emit($event)"
+        ></app-all-tasks-view>
+      }
+      @case ('done') {
+        <app-done-tasks-view
+          [tasks]="tasksDone()"
+          (deleteTask)="onDeleteTask($event)"
+          (toggleDone)="onToggleDone($event)"
+          (updateTask)="onUpdateTask($event)"
+          (validationError)="validationError.emit($event)"
+          (componentClosed)="infoNotification.emit($event)"
+        ></app-done-tasks-view>
+      }
+      @case ('not-done') {
+        <app-not-done-tasks-view
+          [tasks]="tasksNotDone()"
+          (deleteTask)="onDeleteTask($event)"
+          (toggleDone)="onToggleDone($event)"
+          (updateTask)="onUpdateTask($event)"
+          (validationError)="validationError.emit($event)"
+          (componentClosed)="infoNotification.emit($event)"
+        ></app-not-done-tasks-view>
+      }
+    }
+  </div>
+</section>
