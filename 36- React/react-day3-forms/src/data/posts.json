@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "image": "/ai1.jpg",
+    "title": "You Cannot Spell “Pain” Without AI",
+    "description": "A personal rant about the downsides of AI's rapid adoption in the tech industry. .",
+    "likes": 0,
+    "dislikes": 0
+  },
+  {
+    "id": 2,
+    "image": "/ai2.jpg",
+    "title": "What is A2A?",
+    "description": "A2A (agent-to-agent) is an open protocol introduced by Google that enables autonomous AI agents from different vendors to communicate and collaborate",
+    "likes": 0,
+    "dislikes": 0
+  },
+  {
+    "id": 3,
+    "image": "/novaai.webp",
+    "title": "The Future of AI",
+    "description": "Predictions and possibilities for AI in the next decade, including ethics and governance challenges.",
+    "likes": 0,
+    "dislikes": 0
+  }
+]
