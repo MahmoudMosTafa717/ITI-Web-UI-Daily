@@ -1,0 +1,15 @@
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
+  padding: 0px;
+}
+.no-posts {
+  width: 100%;
+  text-align: center;
+  padding: 40px;
+  color: var(--secondary-text);
+  font-size: 18px;
+  font-style: italic;
+}
