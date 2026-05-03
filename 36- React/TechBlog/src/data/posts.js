@@ -1,0 +1,20 @@
+// Static data for blog posts
+const posts = [
+  {
+    image: "/public/1.jpg",
+    title: "The Rise of AI",
+    description: "Exploring the advancements in artificial intelligence.",
+  },
+  {
+    image: "/public/2.jpg",
+    title: "AI in Everyday Life",
+    description: "How AI is transforming our daily routines.",
+  },
+  {
+    image: "/public/3.jpg",
+    title: "The Future of AI",
+    description: "Predictions and possibilities for AI in the next decade.",
+  },
+];
+
+export default posts;

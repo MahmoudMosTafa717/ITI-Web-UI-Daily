@@ -1,0 +1,15 @@
+/* Slider.css */
+.slider {
+  display: flex;
+  overflow: hidden;
+  background-color: #1e293b;
+  padding: 1rem;
+  justify-content: center;
+}
+
+.slider img {
+  max-width: 100%;
+  height: auto;
+  margin: 0 0.5rem;
+  border-radius: 8px;
+}
